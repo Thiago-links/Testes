@@ -34,7 +34,7 @@ if st.button("Validar"):
     try:
         if validar_email(email):
             validacao_email = validar_email(email)
-            st.success("Email cadastrado.")
+            st.success("Email salvo.")
         
         else:
             st.warning("Insira o seu Email.")
@@ -79,6 +79,9 @@ if st.button("Enviar Formulário completo"):
     if nome.strip() == '':
         st.warning("Insira seu nome")
     
+    elif data_de_nasc > date(2015,5,25):
+        st.warning("Idade Inválida")
+
     elif email.strip() == '':
         st.warning("Insira seu Email")
     
