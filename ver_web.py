@@ -106,13 +106,3 @@ if st.button("Enviar Formulário completo"):
             arquivo.write(dados)
 
         st.success("Informações salvas com sucesso!")
-
-with open("dados_cadastro.txt", "r", encoding='utf-8') as file:
-    conteudo = file.read()
-
-st.download_button(
-    label="📥 Baixar dados cadastrados",
-    data=conteudo,
-    file_name="dados_cadastro.txt",
-    mime="text/plain"
-)
